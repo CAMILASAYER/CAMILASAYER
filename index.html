@@ -11,17 +11,17 @@
 </head>
 <body>
   <nav class="navbar">
-    <ul>
-      <li><a href="#personal-info">Datos Personales</a></li>
-      <li><a href="#semestre i">Semestre I</a></li>
-      <li><a href="#semestre ii">Semestre II</a></li>
-      <li><a href="#taller">Taller</a></li>
-      <li><a href="#destacados">Destacados</a></li>
-    </ul>
-
-    <p>Maria Camila Sayer Medina</p>
-    <img src="img/prueba1.png" alt="">
-
+    <div class="nav-links">
+      <a href="#datos-personales">Datos Personales</a>
+      <a href="#semestre-i">Semestre I</a>
+      <a href="#semestre-ii">Semestre II</a>
+      <a href="#taller">Taller</a>
+      <a href="#destacados">Destacados</a>
+    </div>
+    <div class="right-section">
+      <span>Maria Camila Sayer</span>
+      <img class="logo" src="img/prueba1.png" alt="">
+    </div>
   </nav>
 
   <div id="personal-info" class="personal-info-layout">
@@ -116,48 +116,37 @@
     }
 
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #0D0D0D;
-      padding: 10px 5%;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 100;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .navbar p {
-        color: #F2F0D0;
-        text-align: right
-    }
-
-    .navbar img {
-        width: 50px; 
-        height: auto; 
-        margin-left: 2%
-    }
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar a {
-      text-decoration: none;
-      color: #F2F0D0;
-      padding: 10px 15px;
-      transition: background-color 0.3s;
-    }
-
-    .navbar a:hover {
-      background-color: #444;
-      border-radius: 5px;
-    }
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+  }
     .logo-container {
       display: flex;
       align-items: center;
@@ -208,17 +197,6 @@
     }
 
     @media (max-width: 768px) {
-
-      .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-      }
-
-      .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-      }
 
       .personal-info-layout {
         flex-direction: column;

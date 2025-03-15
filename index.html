@@ -19,8 +19,8 @@
       <li><a href="#destacados">Destacados</a></li>
     </ul>
 
-    <p style="color: #F2F0D0; text-align: right;">Maria Camila Sayer Medina</p>
-    <img style="width: 50px; height: auto; margin-left: 2%;" src="img/prueba1.png" alt="">
+    <p>Maria Camila Sayer Medina</p>
+    <img src="img/prueba1.png" alt="">
 
   </nav>
 
@@ -102,6 +102,12 @@
 
   <style>
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Work Sans', sans-serif;
       background-color: #EAE7F8;
@@ -122,6 +128,16 @@
       transition: transform 0.3s ease-in-out;
     }
 
+    .navbar p {
+        color: #F2F0D0;
+        text-align: right
+    }
+
+    .navbar img {
+        width: 50px; 
+        height: auto; 
+        margin-left: 2%
+    }
     .navbar ul {
       list-style: none;
       display: flex;
@@ -192,12 +208,6 @@
     }
 
     @media (max-width: 768px) {
-
-        * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
       .navbar {
         flex-direction: column;

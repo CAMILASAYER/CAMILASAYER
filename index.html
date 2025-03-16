@@ -73,33 +73,25 @@
     </div>
   </section>
 
-  <footer id="contact" class="contact-section">
-    <div class="social-icons">
-      <div class="icon-container">
-          <img src="footer/communication.png" alt="Enviar correo" 
-          style="cursor: pointer;" onclick="enviarCorreo()">
+  <footer>
+    <a href="mailto:camilasayer@gmail.com" class="social-icon" onclick="enviarCorreo()"><img src="footer/communication.png" alt="Gmail"><p id="mensaje" style="display: none; color: white; font-weight: bold;">Correo copiado al portapapeles</p>Gmail</a>
 
-          <p id="mensaje" style="display: none; color: white; font-weight: bold;">Correo copiado al portapapeles</p>
-          <span>Gmail</span>
-      </div>
-      <div class="icon-container">
-          <a href=""><img src="footer/facebook-app-symbol.png" alt="Facebook"></a>
-          <span>Facebook</span>
-      </div>
-      <div class="icon-container">
-          <a href=""><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
-          <span>LinkedIn</span>
-      </div>
-      <div class="icon-container">
-          <a href=""><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
-          <span>Instagram</span>
-      </div>
-      <div class="icon-container">
-          <a href=""><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
-          <span>WhatsApp</span>
-      </div>
-  </div>
-
+    <a href="https://www.facebook.com/share/1A3JbguwPL/" class="social-icon">
+      <img src="footer/facebook-app-symbol.png" alt="Facebook">
+      Facebook
+    </a>
+    <a href="www.linkedin.com/in/maría-camila-sáyer-medina-452a1b356" class="social-icon">
+      <img src="footer/linkedin.png" alt="LinkedIn">
+      LinkedIn
+    </a>
+    <a href="https://www.instagram.com/k1t4_?igsh=YjQ3MTh6MnUwZG93" class="social-icon">
+      <img src="footer/instagram.png" alt="Instagram">
+      Instagram
+    </a>
+    <a href="https://wa.me/573183272101" class="social-icon">
+      <img src="footer/whatsapp.png" alt="WhatsApp">
+      WhatsApp
+    </a>
   </footer>
 
   <style>
@@ -118,6 +110,7 @@
     }
 
     .navbar {
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -206,33 +199,26 @@
     }
 
     footer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
       background-color: #333;
-      padding: 20px;
-      text-align: center;            
     }
 
-    footer span {
+    .social-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
       color: white;
+      font-size: 14px;
     }
 
-   .social-icons {
-     display: flex;
-     justify-content: center;
-     gap: 30px;
-    }
-
-    .icon-container {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-    }
-
-   .icon-container img {
-     width: 40px;
-     height: 40px;
-    }
-   .icon-container span {
-      margin-top: 5px;
+    .social-icon img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
     }
 
     @media (max-width: 768px) {
@@ -290,6 +276,15 @@
       max-width: 80%;
       height: auto;
     }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .social-icon {
+        margin-bottom: 15px;
+      }
 
     }
   </style>

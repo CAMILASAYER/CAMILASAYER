@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio</title>
+  <title>Semestre II</title>
   <link rel="icon" type="image/png" href="img/corazon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,33 @@
         </div>
       </nav>
       
+      <center><h1 class="titulo">Semestre II</h1></center>
+      
+      <hr>
+      <section id="semestreI" class="section gallery-section">
+        <div class="image">
+          <img src="semestre1/Armonías cromáticas.png">
+      </div>
+        <div class="tittle">
+        <h1>Armonías cromáticas (2024)</h1>
+        <br>
+        <br>
+        <p>Esta serie de ilustraciones explora el uso de armonías cromáticas a través de composiciones geométricas dinámicas. Cada pieza utiliza una combinación de colores estratégicamente seleccionados para generar equilibrio y contraste visual. La técnica empleada es marcadores sobre papel, permitiendo una aplicación vibrante y precisa del color.</p>
+       </div>
+      </section>
 
+      <hr>
+      <section id="semestreI" class="section gallery-section">
+        <div class="image">
+          <img src="semestre1/Grafías.jpg">
+      </div>
+        <div class="tittle">
+        <h1>Grafías (2024)</h1>
+        <br>
+        <br>
+        <p>Serie de ilustraciones experimentales creadas con tinta y objetos no convencionales como cadenas, latas de cerveza y plástico de burbujas. Esta técnica explora la textura y el azar en la composición, generando formas y patrones únicos. Mediante la impresión y el uso de diferentes herramientas, se logra una estética abstracta y expresiva, resaltando el contraste entre el negro de la tinta y el fondo blanco del papel.</p>
+       </div>
+      </section>
 
       <footer>
         <a href="mailto:camilasayer@gmail.com" class="social-icon gmail" onclick="enviarCorreo()"><img src="footer/communication.png" alt="Gmail"><p id="mensaje" style="display: none; color: white; font-weight: bold;">Correo copiado al portapapeles</p>Gmail</a>
@@ -58,49 +84,89 @@
         
             body {
               font-family: 'Work Sans', sans-serif;
-              background-color: #EAE7F8;
-              color: #0D0D0D;
+              background-color: #dbd9e7;
+              color: #333;
               overflow-x: hidden;
             }
         
-            .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            overflow-x: auto;
-            white-space: nowrap;
-          }
-          .nav-links {
-            display: flex;
-            gap: 20px;
-          }
-          .nav-links a {
-            color: white;
-            text-decoration: none;
-          }
-          .nav-links a:hover {
-            text-decoration: underline;
-          }
-          .right-section {
-            margin-left: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-          }
-          .logo {
-            width: 40px;
-            height: 40px;
-            background-color: white;
-            border-radius: 50%;
-          }
-            .logo-container {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-            }
+  .navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #ffffff;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  .right-section {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .titulo{
+      padding: 100px 0px 40px 0px;
+    }
+
+    hr {
+      border: none;
+      height: 5px;
+      color: #eae7f8;
+      background-color: #eae7f8;
+      margin-bottom: 50px;
+    }
+    
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 50vh;
+      padding: 50px 0px 100px 0px;
+    }
+
+    .tittle {
+      width: 50%;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .image {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image img {
+      max-width: 80%;
+      height: auto;
+    }
           
     footer {
       display: flex;
@@ -115,7 +181,7 @@
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      color: white;
+      color: #ffffff;
       font-size: 14px;
       padding: 0px 20px;
     }
@@ -127,6 +193,10 @@
     }
     
     @media (max-width: 768px) {
+
+      .right-section span {
+      display: none;
+    }
 
       footer {
       display: flex;
@@ -146,7 +216,7 @@
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      color: white;
+      color: #ffffff;
       font-size: 14px;
       width: 50px;
       margin-bottom: 15px;
@@ -159,7 +229,7 @@
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      color: white;
+      color: #ffffff;
       font-size: 14px;
       width: 50px;
       margin-bottom: 15px;
@@ -171,7 +241,7 @@
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      color: white;
+      color: #ffffff;
       font-size: 14px;
       width: 50px;
       margin-bottom: 15px;
@@ -183,7 +253,7 @@
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      color: white;
+      color: #ffffff;
       font-size: 14px;
       width: 50px;
       margin-bottom: 15px;
@@ -195,7 +265,7 @@
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      color: white;
+      color: #ffffff;
       font-size: 14px;
       width: 50px;
       margin-bottom: 15px;

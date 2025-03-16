@@ -9,18 +9,40 @@
 
     <nav class="navbar">
         <div class="nav-links">
-          <a href="#personal-info">Datos Personales</a>
-          <a href="#semestre i">Semestre I</a>
-          <a href="#semestre ii">Semestre II</a>
-          <a href="#taller">Taller</a>
-          <a href="#destacados">Destacados</a>
+          <a href="index.html">Datos Personales</a>
+          <a href="semestreI.html">Semestre I</a>
+          <a href="semestreII.html">Semestre II</a>
+          <a href="destacados.html">Destacados</a>
         </div>
         <div class="right-section">
           <span>| Maria Camila Sayer</span>
           <img class="logo" src="img/cs.png" alt="">
         </div>
       </nav>
+      
 
+
+      <footer>
+        <a href="mailto:camilasayer@gmail.com" class="social-icon gmail" onclick="enviarCorreo()"><img src="footer/communication.png" alt="Gmail"><p id="mensaje" style="display: none; color: white; font-weight: bold;">Correo copiado al portapapeles</p>Gmail</a>
+    
+        <a href="https://www.facebook.com/share/1A3JbguwPL/" class="social-icon facebook">
+          <img src="footer/facebook-app-symbol.png" alt="Facebook">
+          Facebook
+        </a>
+        <a href="https://www.linkedin.com/in/mar%C3%ADa-camila-s%C3%A1yer-medina-452a1b356/" class="social-icon linkedin">
+          <img src="footer/linkedin.png" alt="LinkedIn">
+          LinkedIn
+        </a>
+        <a href="https://www.instagram.com/k1t4_?igsh=YjQ3MTh6MnUwZG93" class="social-icon instagram">
+          <img src="footer/instagram.png" alt="Instagram">
+          Instagram
+        </a>
+        <a href="https://wa.me/573183272101" class="social-icon whatsapp">
+          <img src="footer/whatsapp.png" alt="WhatsApp">
+          WhatsApp
+        </a>
+      </footer>
+    
 <style>
 
         * {
@@ -74,8 +96,128 @@
               align-items: center;
               gap: 10px;
             }
-        
+          
+    footer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
+      background-color: #333;
+    }
+
+    .social-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      padding: 0px 20px;
+    }
+
+    .social-icon img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+    
+    @media (max-width: 768px) {
+
+      footer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0px 0px 30px 0px;
+      background-color: #333;
+      height: 200px;
+      flex-direction: row;
+        align-items: center;
+    }
+
+    .facebook {
+      margin-top: 150px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .instagram {
+      position: relative;
+      margin-top: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .gmail {
+      margin-top: -30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .linkedin {
+      margin-top: -30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .whatsapp {
+      margin-top: -30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      width: 50px;
+      margin-bottom: 15px;
+    }
+    }
     </style>
+
+<script>
+  function enviarCorreo() {
+      const email = "camilasayer@gmail.com";
+
+      // Copia el correo al portapapeles
+      navigator.clipboard.writeText(email).then(() => {
+          // Muestra el mensaje de confirmación
+          const mensaje = document.getElementById("mensaje");
+          mensaje.style.display = "block";
+
+          // Oculta el mensaje después de 2 segundos
+          setTimeout(() => {
+              mensaje.style.display = "none";
+          }, 2000);
+      });
+
+      // Abre el cliente de correo
+      window.location.href = "mailto:" + email;
+  }
+</script>
     
 </body>
 </html>

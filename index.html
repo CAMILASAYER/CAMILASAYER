@@ -76,21 +76,21 @@
   </div>
 
   <footer>
-    <a href="mailto:camilasayer@gmail.com" class="social-icon" onclick="enviarCorreo()"><img src="footer/communication.png" alt="Gmail"><p id="mensaje" style="display: none; color: white; font-weight: bold;">Correo copiado al portapapeles</p>Gmail</a>
+    <a href="mailto:camilasayer@gmail.com" class="social-icon gmail" onclick="enviarCorreo()"><img src="footer/communication.png" alt="Gmail"><p id="mensaje" style="display: none; color: white; font-weight: bold;">Correo copiado al portapapeles</p>Gmail</a>
 
-    <a href="https://www.facebook.com/share/1A3JbguwPL/" class="social-icon">
+    <a href="https://www.facebook.com/share/1A3JbguwPL/" class="social-icon facebook">
       <img src="footer/facebook-app-symbol.png" alt="Facebook">
       Facebook
     </a>
-    <a href="https://www.linkedin.com/in/mar%C3%ADa-camila-s%C3%A1yer-medina-452a1b356/" class="social-icon">
+    <a href="https://www.linkedin.com/in/mar%C3%ADa-camila-s%C3%A1yer-medina-452a1b356/" class="social-icon linkedin">
       <img src="footer/linkedin.png" alt="LinkedIn">
       LinkedIn
     </a>
-    <a href="https://www.instagram.com/k1t4_?igsh=YjQ3MTh6MnUwZG93" class="social-icon">
+    <a href="https://www.instagram.com/k1t4_?igsh=YjQ3MTh6MnUwZG93" class="social-icon instagram">
       <img src="footer/instagram.png" alt="Instagram">
       Instagram
     </a>
-    <a href="https://wa.me/573183272101" class="social-icon">
+    <a href="https://wa.me/573183272101" class="social-icon whatsapp">
       <img src="footer/whatsapp.png" alt="WhatsApp">
       WhatsApp
     </a>
@@ -208,11 +208,14 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      padding: 20px 0;
+      padding: 0px 0px 30px 0px;
       background-color: #333;
+      height: 200px;
     }
 
-    .social-icon {
+    .facebook {
+      margin-top: 150px;
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -220,6 +223,48 @@
       color: white;
       font-size: 14px;
     }
+
+    .instagram {
+      position: relative;
+      margin-top: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+    .gmail {
+      margin-top: -30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+    .linkedin {
+      margin-top: -30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      margin-top: -30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
 
     .social-icon img {
       width: 40px;
@@ -288,13 +333,15 @@
     }
 
     footer {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
       }
 
       .social-icon {
+        width: 50px;
         margin-bottom: 15px;
       }
+  
 
     }
   </style>

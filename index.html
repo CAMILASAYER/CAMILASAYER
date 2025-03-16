@@ -76,9 +76,10 @@
   <footer id="contact" class="contact-section">
     <div class="social-icons">
       <div class="icon-container">
-        <a href="mailto:andrestorres1076@gmail.com">
-          <img src="footer/communication.png" alt="Enviar correo" style="cursor: pointer;">
-        </a>
+          <img src="footer/communication.png" alt="Enviar correo" 
+          style="cursor: pointer;" onclick="enviarCorreo()">
+
+          <p id="mensaje" style="display: none; color: white; font-weight: bold;">Correo copiado al portapapeles</p>
           <span>Gmail</span>
       </div>
       <div class="icon-container">
@@ -283,9 +284,24 @@
   </style>
 
 <script>
-  document.getElementById("correoImagen").addEventListener("click", function() {
-      window.location.href = "mailto:andrestorres1076@gmail.com";
-  });
+  function enviarCorreo() {
+      const email = "camilasayer@gmail.com";
+
+      // Copia el correo al portapapeles
+      navigator.clipboard.writeText(email).then(() => {
+          // Muestra el mensaje de confirmación
+          const mensaje = document.getElementById("mensaje");
+          mensaje.style.display = "block";
+
+          // Oculta el mensaje después de 2 segundos
+          setTimeout(() => {
+              mensaje.style.display = "none";
+          }, 2000);
+      });
+
+      // Abre el cliente de correo
+      window.location.href = "mailto:" + email;
+  }
 </script>
 
 </body>

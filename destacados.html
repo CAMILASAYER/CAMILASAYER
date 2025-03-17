@@ -24,9 +24,12 @@
           <img class="logo" src="img/cs.png" alt="">
         </div>
       </nav>
-      
+      <div>
+      <button onclick="window.history.back();" class="back-btn">
+      <img src="img/back.png" alt="">
+      </button>
       <center><h1 class="titulo">Destacados</h1></center>
-      
+      </div>
       <hr>
       <section id="semestreI" class="section gallery-section">
         <div class="image">
@@ -50,6 +53,19 @@
         <br>
         <br>
         <p>Ilustración digital realizada en Krita con tableta gráfica, inspirada en el personaje Viper de Valorant. Con un estilo dinámico y expresivo, esta pieza resalta los tonos oscuros y verdes característicos del personaje, junto con detalles brillantes que añaden profundidad y realismo. La composición tipo llavero refuerza su estética estilizada, mientras que la iluminación y los sombreados enfatizan el volumen y la acción en la escena.</p>
+       </div>
+      </section>
+
+      <hr>
+      <section id="semestreI" class="section gallery-section">
+        <div class="image">
+          <img src="destacados/Coco.jpg">
+      </div>
+        <div class="tittle">
+        <h1>Coco (2025)</h1>
+        <br>
+        <br>
+        <p>Ilustración a lápiz de color inspirada en mi gato Coco. Esta pieza captura su esencia en un momento de relajación y movimiento, utilizando tonos cálidos de amarillo y naranja para reflejar su personalidad vibrante. La técnica de lápiz de color permite texturas suaves y detalladas que resaltan su pelaje y expresión juguetona.</p>
        </div>
       </section>
 
@@ -129,6 +145,22 @@
       align-items: center;
       gap: 10px;
     }
+
+    .back-btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+      position: absolute;
+      margin-top: 7%;
+  }
+  .back-btn img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s;
+  }
+  .back-btn:hover img {
+      transform: scale(1.1);
+  }
 
     .titulo{
       padding: 100px 0px 40px 0px;

@@ -24,9 +24,12 @@
           <img class="logo" src="img/cs.png" alt="">
         </div>
       </nav>
-      
+      <div>
+      <button onclick="window.history.back();" class="back-btn">
+        <img src="img/back.png" alt="">
+      </button>
       <center><h1 class="titulo">Semestre II</h1></center>
-      
+      </div>
       <hr>
       <section id="semestreI" class="section gallery-section">
         <div class="image">
@@ -129,6 +132,22 @@
       align-items: center;
       gap: 10px;
     }
+
+    .back-btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+      position: absolute;
+      margin-top: 7%;
+  }
+  .back-btn img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s;
+  }
+  .back-btn:hover img {
+      transform: scale(1.1);
+  }
 
     .titulo{
       padding: 100px 0px 40px 0px;

@@ -58,6 +58,83 @@
        </div>
       </section>
 
+      <hr>
+      <center><h2 class="titulo">Semestre II</h2></center>
+
+      <hr>
+      <section id="semestreI" class="section gallery-section">
+        <div class="image">
+          <img src="semestre1/Armonías cromáticas.png">
+      </div>
+        <div class="tittle">
+        <h1>Triángulo de penrose (2025)</h1>
+        <br>
+        <br>
+        <p>aqui va el parrafo</p>
+        <br>
+        <h3>Proceso</h3>
+        <div class="galeria-mini">
+        <img src="semestre2_procesos/Triángulo de penrose/1ro.jpg" alt="Mini 1">
+        <img src="semestre2_procesos/Triángulo de penrose/2do.jpg" alt="Mini 2">
+        <img src="semestre2_procesos/Triángulo de penrose/3ra.jpg" alt="Mini 3">
+        <img src="semestre2_procesos/Triángulo de penrose/4ta.jpg" alt="Mini 4">
+        </div>
+       </div>
+      </section>
+
+      <hr>
+      <section id="semestreI" class="section2 gallery-section">
+        <div class="image">
+          <img src="semestre2/Cubo Cromático.jpg">
+      </div>
+        <div class="tittle">
+        <h1>Cubo Cromático (2025)</h1>
+        <br>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia nam repellendus quasi dignissimos qui dolorem voluptas nesciunt! Dicta, consectetur rem recusandae incidunt sunt delectus repellendus quam praesentium soluta impedit?</p>
+        <br>
+        <h3>Proceso</h3>
+        <div class="galeria-mini2">
+        <img src="semestre2_procesos/Cubo Cromatico/1ra.jpg" alt="Mini 1">
+        <img src="semestre2_procesos/Cubo Cromatico/2da.jpg" alt="Mini 2">
+        <img src="semestre2_procesos/Cubo Cromatico/3ra.jpg" alt="Mini 3">
+        <img src="semestre2_procesos/Cubo Cromatico/4ta.jpg" alt="Mini 4">
+        <img src="semestre2_procesos/Cubo Cromatico/5ta.jpg" alt="Mini 5">
+        <img src="semestre2_procesos/Cubo Cromatico/6ta.jpg" alt="Mini 6">
+        <img src="semestre2_procesos/Cubo Cromatico/7ma.jpg" alt="Mini 7">
+        <img src="semestre2_procesos/Cubo Cromatico/8va.jpg" alt="Mini 8">
+        <img src="semestre2_procesos/Cubo Cromatico/9na.jpg" alt="Mini 9">
+        <img src="semestre2_procesos/Cubo Cromatico/10ma.jpg" alt="Mini 10">
+        <img src="semestre2_procesos/Cubo Cromatico/11va.jpg" alt="Mini 11">
+        </div>
+       </div>
+      </section>
+
+      <hr>
+      <section id="semestreI" class="section3 gallery-section">
+        <div class="image">
+          <img src="semestre2/Icosaedro truncado.jpg">
+      </div>
+        <div class="tittle">
+        <h1>Icosaedro truncado - Kirigami (2025)</h1>
+        <br>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia nam repellendus quasi dignissimos qui dolorem voluptas nesciunt! Dicta, consectetur rem recusandae incidunt sunt delectus repellendus quam praesentium soluta impedit?</p>
+        <br>
+        <h3>Proceso</h3>
+        <div class="galeria-mini3">
+        <img src="semestre2_procesos/Icosaedro truncado_Kirigami/1ra.jpg" alt="Mini 1">
+        <img src="semestre2_procesos/Icosaedro truncado_Kirigami/2da.jpg" alt="Mini 2">
+        <img src="semestre2_procesos/Icosaedro truncado_Kirigami/3ra.jpg" alt="Mini 3">
+        <img src="semestre2_procesos/Icosaedro truncado_Kirigami/4ta.jpg" alt="Mini 4">
+        <img src="semestre2_procesos/Icosaedro truncado_Kirigami/5ta.jpg" alt="Mini 5">
+        <img src="semestre2_procesos/Icosaedro truncado_Kirigami/6ta.jpg" alt="Mini 6">
+        <img src="semestre2_procesos/Icosaedro truncado_Kirigami/7ma.jpg" alt="Mini 7">
+        <img src="semestre2_procesos/Icosaedro truncado_Kirigami/7ma.jpg" alt="Mini 8">
+        </div>
+       </div>
+      </section>
+
       <footer>
         <a href="mailto:camilasayer@gmail.com" class="social-icon gmail" onclick="enviarCorreo()"><img src="footer/communication.png" alt="Gmail"><p id="mensaje" style="display: none; color: white; font-weight: bold;">Correo copiado al portapapeles</p>Gmail</a>
     
@@ -173,7 +250,25 @@
       justify-content: space-between;
       width: 100%;
       height: 50vh;
-      padding: 50px 0px 100px 0px;
+      padding: 90px 0px 150px 0px;
+    }
+
+    .section2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 50vh;
+      padding: 200px 0px 250px 0px;
+    }
+
+    .section3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 50vh;
+      padding: 200px 0px 250px 0px;
     }
 
     .tittle p{
@@ -185,6 +280,54 @@
       text-align: center;
       font-size: 1rem;
     }
+
+    .galeria-mini {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px auto 0 auto; /* ← esto centra horizontalmente */
+  max-width: 80%;            /* ← puedes ajustar a 60%, 70% según lo que quieras */
+}
+
+.galeria-mini img {
+  width: 100%;
+  height: 80px; /* Ajusta según el tamaño que te parezca bien */
+  object-fit: cover; /* Recorta la imagen manteniendo el encuadre */
+  border-radius: 4px;
+  display: block;
+}
+
+.galeria-mini2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin: 20px auto 0 auto; /* ← esto centra horizontalmente */
+  max-width: 80%;            /* ← puedes ajustar a 60%, 70% según lo que quieras */
+}
+
+.galeria-mini2 img {
+  width: 100%;
+  height: 80px; /* Ajusta según el tamaño que te parezca bien */
+  object-fit: cover; /* Recorta la imagen manteniendo el encuadre */
+  border-radius: 4px;
+  display: block;
+}
+
+.galeria-mini3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px auto 0 auto; /* ← esto centra horizontalmente */
+  max-width: 80%;            /* ← puedes ajustar a 60%, 70% según lo que quieras */
+}
+
+.galeria-mini3 img {
+  width: 100%;
+  height: 80px; /* Ajusta según el tamaño que te parezca bien */
+  object-fit: cover; /* Recorta la imagen manteniendo el encuadre */
+  border-radius: 4px;
+  display: block;
+}
 
     .image {
       width: 50%;
@@ -219,6 +362,35 @@
       width: 40px;
       height: 40px;
       margin-bottom: 8px;
+    }
+
+    /* Estilos del modal */
+    .modal {
+      display: none; /* Oculto por defecto */
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .modal.cerrar {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
     }
     
     @media (max-width: 768px) {
@@ -305,6 +477,36 @@
     }
     }
     </style>
+
+<!-- Modal de vista previa -->
+<div class="modal" id="modal">
+  <span class="cerrar" id="cerrarModal">&times;</span>
+  <img id="imagenModal" src="" alt="Vista previa">
+</div>
+
+<script>
+  const modal = document.getElementById("modal");
+  const imagenModal = document.getElementById("imagenModal");
+  const cerrar = document.getElementById("cerrarModal");
+
+  document.querySelectorAll(".galeria-mini img, .image img, .galeria-mini2 img, .galeria-mini3 img").forEach(img => {
+    img.addEventListener("click", () => {
+      imagenModal.src = img.src;
+      modal.style.display = "flex";
+    });
+  });
+
+  cerrar.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // También se cierra si hacen clic fuera de la imagen
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
 
 <script>
   function enviarCorreo() {

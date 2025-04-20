@@ -15,8 +15,6 @@
     <nav class="navbar">
         <div class="nav-links">
           <a href="index.html">Inicio</a>
-          <a href="semestreI.html">Semestre I</a>
-          <a href="semestreII.html">Semestre II</a>
           <a href="taller.html">Taller</a>
         </div>
         <div class="right-section">
@@ -28,9 +26,15 @@
       <button onclick="window.history.back();" class="back-btn">
       <img src="img/back.png" alt="">
       </button>
-      <center><h1 class="titulo">Destacados</h1></center>
+      <center><h1 class="titulomain">Destacados</h1></center>
       </div>
+
       <hr>
+
+      <center><h2 class="titulo">Proyectos Personales</h2></center>
+
+      <hr>
+
       <section id="semestreI" class="section gallery-section">
         <div class="image">
           <img src="destacados/Anime.jpg">
@@ -66,6 +70,36 @@
         <br>
         <br>
         <p>Ilustración a lápiz de color inspirada en mi gato Coco. Esta pieza captura su esencia en un momento de relajación y movimiento, utilizando tonos cálidos de amarillo y naranja para reflejar su personalidad vibrante. La técnica de lápiz de color permite texturas suaves y detalladas que resaltan su pelaje y expresión juguetona.</p>
+       </div>
+      </section>
+
+      <hr>
+
+      <center><h2 class="titulo">Semestre I</h2></center>
+
+      <hr>
+      <section id="semestreI" class="section gallery-section">
+        <div class="image">
+          <img src="semestre1/Armonías cromáticas.png">
+      </div>
+        <div class="tittle">
+        <h1>Armonías cromáticas (2024)</h1>
+        <br>
+        <br>
+        <p>Esta serie de ilustraciones explora el uso de armonías cromáticas a través de composiciones geométricas dinámicas. Cada pieza utiliza una combinación de colores estratégicamente seleccionados para generar equilibrio y contraste visual. La técnica empleada es marcadores sobre papel, permitiendo una aplicación vibrante y precisa del color.</p>
+       </div>
+      </section>
+
+      <hr>
+      <section id="semestreI" class="section gallery-section">
+        <div class="image">
+          <img src="semestre1/Grafías.jpg">
+      </div>
+        <div class="tittle">
+        <h1>Grafías (2024)</h1>
+        <br>
+        <br>
+        <p>Serie de ilustraciones experimentales creadas con tinta y objetos no convencionales como cadenas, latas de cerveza y plástico de burbujas. Esta técnica explora la textura y el azar en la composición, generando formas y patrones únicos. Mediante la impresión y el uso de diferentes herramientas, se logra una estética abstracta y expresiva, resaltando el contraste entre el negro de la tinta y el fondo blanco del papel.</p>
        </div>
       </section>
 
@@ -162,8 +196,12 @@
       transform: scale(1.1);
   }
 
-    .titulo{
+    .titulomain{
       padding: 100px 0px 40px 0px;
+    }
+
+    .titulo{
+      padding: 0px 0px 40px 0px;
     }
 
     hr {
@@ -228,6 +266,10 @@
 
       .right-section span {
       display: none;
+    }
+
+    .back-btn {
+      margin-top: 20%;
     }
 
       footer {

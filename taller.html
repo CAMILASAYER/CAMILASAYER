@@ -13,14 +13,18 @@
 <body>
 
     <nav class="navbar">
-        <div class="nav-links">
-          <a href="index.html">Inicio</a>
-          <span class="nav-separator">|</span>
-          <a href="destacados.html">Destacados</a>
-        </div>
+
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <span class="nav-separator">|</span>
+        <a href="taller.html">Taller</a>
+      </div>
+      
         <div class="right-section">
-          <span>| Maria Camila Sayer</span>
+          <span class="namecam" data-full="Diseño Digital y Multimedia">D D M</span>
+          <span class="nav-separator">|</span>
           <img class="logo" src="infologo/cam.webp" alt="">
+          <span class="nombrecam" data-full="María Camila Sáyer Medina">María</span>
         </div>
       </nav>
       <div>
@@ -100,7 +104,8 @@
         <h1>Cubo Cromático (2025)</h1>
         <br>
         <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia nam repellendus quasi dignissimos qui dolorem voluptas nesciunt! Dicta, consectetur rem recusandae incidunt sunt delectus repellendus quam praesentium soluta impedit?</p>
+        <p>Modelo tridimensional que organiza los colores en un espacio cúbico según su matiz, brillo y saturación. Sirve para entender cómo interactúan y varían los colores en distintas dimensiones, facilitando su aplicación en diseño y composición visual. 
+        </p>
         <br>
         <h3>Proceso</h3>
         <div class="galeria-mini2">
@@ -129,7 +134,7 @@
         <h1>Triángulo de penrose (2025)</h1>
         <br>
         <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia nam repellendus quasi dignissimos qui dolorem voluptas nesciunt! Dicta, consectetur rem recusandae incidunt sunt delectus repellendus quam praesentium soluta impedit?</p>
+        <p>Maqueta tridimensional que recrea el triángulo imposible utilizando perspectiva forzada. El modelo juega con la percepción visual para simular una figura continua e irreal desde un ángulo específico.</p>
         <br>
         <h3>Proceso</h3>
         <div class="galeria-mini">
@@ -150,7 +155,7 @@
         <h1>Icosaedro truncado - Kirigami (2025)</h1>
         <br>
         <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia nam repellendus quasi dignissimos qui dolorem voluptas nesciunt! Dicta, consectetur rem recusandae incidunt sunt delectus repellendus quam praesentium soluta impedit?</p>
+        <p>Maqueta en papel realizada con técnica de kirigami, basada en la figura geométrica del icosaedro truncado. Explora la construcción precisa de formas poliédricas mediante cortes y pliegues.</p>
         <br>
         <h3>Proceso</h3>
         <div class="galeria-mini3">
@@ -163,6 +168,22 @@
         <img src="semestre2_procesos/Icosaedro truncado_Kirigami/7ma.webp" loading="lazy" data-descripcion="Texto de prueba" alt="Mini 7">
         <img src="semestre2_procesos/Icosaedro truncado_Kirigami/8va.webp" loading="lazy" data-descripcion="Texto de prueba" alt="Mini 8">
         </div>
+       </div>
+      </section>
+
+      <hr>
+
+      
+      <section id="semestreI" class="section2 gallery-section">
+        <div class="image">
+          <img src="semestre2/Personaje Bichos.webp" loading="lazy">
+      </div>
+        <div class="tittle">
+        <h1>Personaje "Bichos" (2025)</h1>
+        <br>
+        <br>
+        <p>Elección personal del personaje Manny de la película Bichos de Disney Pixar</p>
+        <br>
        </div>
       </section>
 
@@ -182,7 +203,7 @@
         <h1>Jirafa (2025)</h1>
         <br>
         <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia nam repellendus quasi dignissimos qui dolorem voluptas nesciunt! Dicta, consectetur rem recusandae incidunt sunt delectus repellendus quam praesentium soluta impedit?</p>
+        <p>lustración digital con un enfoque en luces y sombras, utilizando pinceles digitales para crear profundidad, atmósfera y una ambientación inmersiva en la escena.</p>
        </div>
       </section>
 
@@ -231,7 +252,7 @@
     padding: 10px 20px;
     background-color: #333;
     color: #ffffff;
-    overflow-x: auto;
+    overflow-x: hidden;
     white-space: nowrap;
   }
   .nav-links {
@@ -239,6 +260,134 @@
     gap: 20px;
     align-items: center;
   }
+
+  .nombrecam{
+    font-family: 'Work Sans';
+  }
+
+  .nombrecam {
+      display: inline-block;
+      position: relative;
+      padding: 0.2em 0.6em;
+      background: #333;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: bold;
+      border-radius: 0.25em;
+      white-space: nowrap;
+      cursor: default;
+      width: 3.2em;
+      transition: width 0.5s ease, background 0.3s ease;
+      overflow: visible; /* que deje ver el ::after */
+    }
+
+    .nombrecam::after {
+      content: attr(data-full);
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.2em 0.6em;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      z-index: 2;         /* encima de todo */
+      pointer-events: none;
+      color: #fff;
+    }
+
+    .nombrecam:hover {
+  width: 14em;
+  background: #444;
+  color: transparent;      /* ocultamos el texto original */
+}
+
+.nombrecam:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+  /* z-index ya lo teníamos en 2 */
+}
+
+  .namecam {
+      display: inline-block;
+      position: relative;
+      padding: 0.2em 0.6em;
+      background: #333;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: bold;
+      border-radius: 0.25em;
+      white-space: nowrap;
+      cursor: default;
+      width: 3.2em;
+      transition: width 0.5s ease, background 0.3s ease;
+      overflow: visible; /* que deje ver el ::after */
+    }
+
+    .namecam::after {
+      content: attr(data-full);
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.2em 0.6em;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      z-index: 2;         /* encima de todo */
+      pointer-events: none;
+      color: #fff;
+    }
+
+    .namecam:hover {
+  width: 14em;
+  background: #444;
+  color: transparent;      /* ocultamos el texto original */
+}
+
+.namecam:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+  /* z-index ya lo teníamos en 2 */
+}
+
+  .nav-separator {
+      color: #ffffff;
+      font-size: 1.2rem;
+      opacity: 0.6;
+      user-select: none;
+    }
+
+    .nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
   .nav-separator {
       color: #ffffff;

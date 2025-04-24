@@ -9,23 +9,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-      <span class="namecam">Maria Camila Sayer Medina</span>
-        
+
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <span class="nav-separator">|</span>
+        <a href="taller.html">Taller</a>
+      </div>
+      
         <div class="right-section">
-          
-          <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <span class="nav-separator">|</span>
-            <a href="taller.html">Taller</a>
-          </div>
+          <span class="namecam" data-full="Diseño Digital y Multimedia">D D M</span>
+          <span class="nav-separator">|</span>
           <img class="logo" src="infologo/cam.webp" alt="">
+          <span class="nombrecam" data-full="María Camila Sáyer Medina">María</span>
         </div>
       </nav>
       <div>
@@ -103,6 +102,10 @@
     
 <style>
 
+  html, body {
+  overflow-x: hidden;
+}
+
         * {
               margin: 0;
               padding: 0;
@@ -125,7 +128,7 @@
     padding: 10px 20px;
     background-color: #333;
     color: #ffffff;
-    overflow-x: auto;
+    overflow-x: hidden;
     white-space: nowrap;
   }
   .nav-links {
@@ -134,10 +137,93 @@
     align-items: center;
   }
 
-  .namecam {
-    font-family: "EB Garamond";
-    font-size: 100%;
+  .nombrecam{
+    font-family: 'Work Sans';
   }
+
+  .nombrecam {
+      display: inline-block;
+      position: relative;
+      padding: 0.2em 0.6em;
+      background: #333;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: bold;
+      border-radius: 0.25em;
+      white-space: nowrap;
+      cursor: default;
+      width: 3.2em;
+      transition: width 0.5s ease, background 0.3s ease;
+      overflow: visible; /* que deje ver el ::after */
+    }
+
+    .nombrecam::after {
+      content: attr(data-full);
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.2em 0.6em;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      z-index: 2;         /* encima de todo */
+      pointer-events: none;
+      color: #fff;
+    }
+
+    .nombrecam:hover {
+  width: 14em;
+  background: #444;
+  color: transparent;      /* ocultamos el texto original */
+}
+
+.nombrecam:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+  /* z-index ya lo teníamos en 2 */
+}
+
+  .namecam {
+      display: inline-block;
+      position: relative;
+      padding: 0.2em 0.6em;
+      background: #333;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: bold;
+      border-radius: 0.25em;
+      white-space: nowrap;
+      cursor: default;
+      width: 3.2em;
+      transition: width 0.5s ease, background 0.3s ease;
+      overflow: visible; /* que deje ver el ::after */
+    }
+
+    .namecam::after {
+      content: attr(data-full);
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.2em 0.6em;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      z-index: 2;         /* encima de todo */
+      pointer-events: none;
+      color: #fff;
+    }
+
+    .namecam:hover {
+  width: 14em;
+  background: #444;
+  color: transparent;      /* ocultamos el texto original */
+}
+
+.namecam:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+  /* z-index ya lo teníamos en 2 */
+}
 
   .nav-separator {
       color: #ffffff;
@@ -190,6 +276,7 @@
     height: 40px;
     background-color: #ffffff;
     border-radius: 50%;
+    z-index: 5;
   }
     .logo-container {
       display: flex;

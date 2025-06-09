@@ -347,6 +347,7 @@
     color: #ffffff;
     overflow-x: hidden;
     white-space: nowrap;
+    z-index: 2;
   }
   .nav-links {
     display: flex;
@@ -580,8 +581,13 @@
   margin-top: -50px;
 }
 
+iframe {
+  position: relative;
+  z-index: 1; /* o un valor menor que la barra si esta tiene z-index alto */
+}
+
 .video-wrapper {
-      max-width: 600px;      /* Ancho máximo del video */
+      max-width: 720px;      /* Ancho máximo del video */
       margin: 40px auto;     /* Margen superior/inferior y centrado horizontal */
       padding: 20px;
       background-color: #fff;
